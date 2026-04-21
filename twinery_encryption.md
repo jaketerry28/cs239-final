@@ -64,6 +64,10 @@ Encryption has existed in many forms throughout history. Early methods relied on
 [[Can encryption be misused?]]
 
 ## Plaintext vs Ciphertext
+
+Data before encryption is referred to as plaintext, whereas the data after encryption is referred to as ciphertext. These two phrases are frequently used when discussing encryption and encrypted data.
+
+
 ## Why people encrypt information
 
 Encryption can protect data at rest, in transit and while being processed, regardless of whether the data is in a computer system on-premises or in the cloud. For this reason, encryption has become critical to cloud security efforts and cybersecurity strategies more broadly.
@@ -75,6 +79,21 @@ Source: <a href="https://www.ibm.com/think/topics/encryption#:~:text=organizatio
 </a>
 
 ## Caesar cipher
+
+The Caesar cipher is one of the most well-known methods of encryption. It is a simple shift cipher, where plaintext is shifted so that each letter is represented by a different letter in the alphabet. Historically, this was used in the Roman Republic and named after Julius Caesar. The cipher's use continued after his death however, as it was used by officials in the Roman Empire, and later became part of more complex, modern encryption methods.
+
+It works by shifting the alphabet and subsitituting the letters with those in the shifted alphabet. For example, in a shift of 3 to the left, D is represented by A, E is represented by B, and so on. A visualizer and an example are shown below:
+
+Plaintext:   A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+Ciphertext:  X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
+
+Plaintext:   C   A   E   S   A   R
+Ciphertext:  Z   X   B   P   X   O
+
+Source: <a href="https://www.ibm.com/think/topics/encryption#:~:text=organizations%20that%20use%20encryption%20can%20reduce%20the%20financial%20impact%20of%20a%20data%20breach%20by%20over%20USD%20200%2C000" target="_blank">
+  Trinity College Article
+</a>
+
 ## Enigma / wartime cryptography
 ## How encryption evolved over time
 ## Keys
