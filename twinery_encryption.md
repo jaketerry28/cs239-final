@@ -75,6 +75,11 @@ Source: <a href="https://www.ibm.com/think/topics/encryption#:~:text=organizatio
 </a>
 
 ## Caesar cipher
+
+The Caesar cipher is one of the most well-known methods of encryption. It is a simple shift cipher, where plaintext is shifted so that each letter is represented by a different letter in the alphabet. Historically, this was used in the Roman Republic and named after Julius Caesar. The cipher's use continued after his death however, as it was used by officials in the Roman Empire.
+
+For example, if A is represented by F, then B is represented by G, C by H, and so on.
+
 ## Enigma / wartime cryptography
 ## How encryption evolved over time
 ## Keys
