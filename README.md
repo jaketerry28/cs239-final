@@ -3,10 +3,24 @@ Site: https://jaketerry28.github.io/cs239-final/
 Team: Jake Terry, Vaughn Cox, Quentin Beverly
 
 
+---
 
+We decided on building an interactive museuem on encryption. 
 
+Team members contributions were as follows:
 
---- 
+Quentin Beverly - gathering reliable sources, editing transcripts
+
+Vaugn Cox - writing the transcripts for different sections
+
+Jake Terry - html/css styling, building the interactive script section, secret level, transcripts
+
+We used Twinery with the Sugarcube story framework strictly for implementing a javascript script for an interactive decryption/encryption section using the Caesar cypher with a 3 letter shift. Since sugarcube doesn't support markdown like the standard Harlowe story format, we had to use html and css styling for the transitions and effects.
+
+---
+
+>Framework
+
 Encryption
 # Welcome to the Digital Museum of Encryption
 
