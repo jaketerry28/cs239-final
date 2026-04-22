@@ -476,11 +476,8 @@ Dive Deeper: [[Can encryption be misused?]]
 	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
 &lt;/div&gt;
 [[Main Lobby]] </tw-passagedata><tw-passagedata pid="6" name="Interactive Encrypter" tags="" position="1275,25" size="100,100">&lt;h1&gt;Interactive Encrypter&lt;/h1&gt;
-[[Main Lobby]] 
 
 &lt;h2&gt;Here you can try out encrypting and decrypting your own messages!&lt;/h2&gt;
-
-&lt;small&gt;Each exhibit contains an encrypted word. Decrypt the message to reveal a secret...&lt;/small&gt;
 
 Enter text: &lt;&lt;textbox &quot;$plaintext&quot; &quot;&quot;&gt;&gt;
 
@@ -536,9 +533,10 @@ Enter text: &lt;&lt;textbox &quot;$plaintext&quot; &quot;&quot;&gt;&gt;
 
 &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
 
-&lt;h3&gt;Secret Password Check&lt;/h3&gt;
+&lt;h3&gt;Crack the code for a surprise&lt;/h3&gt;
 
-&lt;em&gt;wkdwv rqh frro fdw kxqwhu&lt;/em&gt;
+&lt;p&gt;Decipher: &lt;em&gt;wkdwv rqh frro fdw kxqwhu&lt;/em&gt;&lt;/p&gt;
+
 Enter the decrypted phrase: &lt;&lt;textbox &quot;$guess&quot; &quot;&quot;&gt;&gt;
 &lt;span id=&quot;password-output&quot;&gt;&lt;/span&gt;
 
@@ -548,7 +546,12 @@ Enter the decrypted phrase: &lt;&lt;textbox &quot;$guess&quot; &quot;&quot;&gt;&
 		let guess = (State.variables.guess || &quot;&quot;).trim().toLowerCase();
 
 		if (guess === answer) {
-			Engine.play(&quot;Hunter Secret&quot;);
+			let audio = new Audio(&quot;https://raw.githubusercontent.com/jaketerry28/cs239-final/main/dragon-studio-wow-423653.mp3&quot;);
+			audio.play().then(() =&gt; {
+				Engine.play(&quot;Hunter Secret&quot;);
+			}).catch(() =&gt; {
+				Engine.play(&quot;Hunter Secret&quot;);
+			});
 		} else {
 			$(&quot;#password-output&quot;).text(&quot;Incorrect password. Try again.&quot;);
 		}
@@ -881,9 +884,7 @@ Dive Deeper: [[Privacy vs surveillance]]
 &lt;p&gt;Source: &lt;a href=&quot;https://www.europol.europa.eu/media-press/newsroom/news/international-operation-takes-down-another-encrypted-messaging-service-used-criminals
 &quot; target=&quot;_blank&quot;&gt;
 International operation takes down another encrypted messaging service used by criminals 
-&lt;/a&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="19" name="Hunter Secret" tags="" position="1575,125" size="100,100">
-
-&lt;div class=&quot;scale-in-center&quot;&gt;
+&lt;/a&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="19" name="Hunter Secret" tags="" position="1575,125" size="100,100">&lt;div class=&quot;scale-in-center&quot;&gt;
 &lt;h1&gt;You found the secret cat&lt;/h1&gt;
 
 	&lt;p&gt;
