@@ -104,7 +104,15 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="SugarCube Encrpytion" startnode="1" creator="Twine" creator-version="2.12.0" format="SugarCube" format-version="2.37.3" ifid="E47EE2A8-EFFA-4572-BC86-35FE764CC22C" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">table {
+	<tw-storydata name="SugarCube Encrpytion" startnode="1" creator="Twine" creator-version="2.12.0" format="SugarCube" format-version="2.37.3" ifid="E47EE2A8-EFFA-4572-BC86-35FE764CC22C" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.scale-in-center {
+	animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.bounce-in-top {
+	animation: bounce-in-top 1.1s both;
+}
+
+table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -125,6 +133,7 @@ td, th {
 	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 
 #output {
 	margin-top: 12px;
@@ -286,7 +295,57 @@ td, th {
 		filter: blur(0);
 		transform: scale(1);
 	}
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Lobby" tags="" position="1250,425" size="100,100">
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Lobby" tags="" position="1250,425" size="100,100">
 
 &lt;h1 id=&quot;main-lobby&quot;&gt;Welcome to the Digital Museum of Encryption&lt;/h1&gt;
 
@@ -308,12 +367,23 @@ td, th {
 	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
 &lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="History of Encryption" tags="" position="1175,950" size="100,100">&lt;h1 id=&quot;history-of-encryption&quot;&gt;History of Encryption&lt;/h1&gt;
-[[Main Lobby]] 
 
-&lt;div class=&quot;obscure-in&quot;&gt;
-&lt;p&gt;Encryption has existed in many forms throughout history. Early methods relied on simple letter substitutions or rearrangements, while modern encryption uses complex mathematical algorithms to protect digital communication, financial transactions, passwords, and private files. Whether used in ancient warfare or modern internet security, the goal remains the same: to preserve confidentiality and protect information from unwanted eyes.&lt;/p&gt;
+
+&lt;div class=&quot;scale-in-center&quot;&gt;
+
+&lt;p&gt;&lt;img  src = &quot;https://informationsecuritybuzz.com/wp-content/uploads/Untitled62.png
+&quot;
+alt = &quot;history of encryption&quot;
+height = auto
+width = auto /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Encryption has existed in many forms throughout human history, adapting to the needs and technologies of each era. In the ancient world, people used basic methods such as letter substitutions, symbol replacements, and rearranged writing to hide military plans, political messages, and other sensitive information from enemies. Over time, these techniques became more organized and sophisticated, especially during periods of war and diplomacy, when protecting communication could mean the difference between success and failure. Although early systems were often simple by modern standards, they introduced the central idea behind encryption: transforming readable information into a form that outsiders could not easily understand.
+
+In the modern world, encryption has become far more advanced and far more essential. Instead of relying mainly on secret alphabets or manual ciphers, today’s systems use complex mathematical algorithms and digital keys to secure data across computers, phones, websites, and networks. Encryption now protects online banking, financial transactions, passwords, private messages, business records, government systems, and personal files stored in the cloud. Even though the tools have changed dramatically, the underlying purpose remains the same as it was centuries ago: to preserve confidentiality, protect valuable information, and keep it safe from unauthorized access.&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;div class=&quot;slide-in-left&quot;&gt;
 &lt;p&gt;
 Deeper Dive: [[Caesar cipher]]
 Deeper Dive: [[Enigma / wartime cryptography]]
@@ -321,7 +391,7 @@ Deeper Dive: [[How encryption evolved over time]]
 &lt;/p&gt;
 
 
-&lt;div class=&quot;slide-in-left&quot;&gt;
+
 &lt;strong&gt;Navigation:&lt;/strong&gt;
 	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
     &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
@@ -332,18 +402,21 @@ Deeper Dive: [[How encryption evolved over time]]
 &lt;/div&gt;
 [[Main Lobby]] </tw-passagedata><tw-passagedata pid="3" name="How Encryption Works" tags="" position="400,750" size="100,100">&lt;h1 id=&quot;how-encryption-works&quot;&gt;How Encryption Works&lt;/h1&gt;
 
-&lt;p&gt;Encryption works by taking readable plaintext and transforming it into unreadable  ciphertext using a mathematical process and a key. The algorithm provides the rules for scrambling the data, while the key controls exactly how that scrambling happens. Different encryption systems use keys in different ways: some use one shared secret key, while others use two related keys. Together, these methods allow modern systems to protect messages, passwords, financial data, and files from unauthorized access. &lt;/p&gt;
+&lt;div class = &quot;obscure-in&quot;&gt;
+&lt;p&gt;Encryption works by taking readable plaintext and transforming it into unreadable  ciphertext using a mathematical process and a key. The algorithm provides the rules for scrambling the data, while the key controls exactly how that scrambling happens. Different encryption systems use keys in different ways: some use one shared secret key, while others use two related keys. Together, these methods allow modern systems to protect messages, passwords, financial data, and files from unauthorized access.&lt;/p&gt;
 
-&lt;h2&gt;Keys&lt;/h2&gt;
-&lt;p&gt;A key is the value used to control a cryptographic operation, such as encryption or decryption. In simple terms, the algorithm is the method, and the key is what makes that method work in a specific way. This matters because encrypted data should only be readable by someone who has the correct key. Even a strong encryption system becomes vulnerable if its key is exposed or poorly managed.}&lt;/p&gt;
+&lt;strong&gt;Keys&lt;/strong&gt;
+&lt;p&gt;A key is the value used to control a cryptographic operation, such as encryption or decryption. In simple terms, the algorithm is the method, and the key is what makes that method work in a specific way. This matters because encrypted data should only be readable by someone who has the correct key. Even a strong encryption system becomes vulnerable if its key is exposed or poorly managed.&lt;/p&gt;
 
+&lt;/div&gt;
 
+&lt;div&gt;
 &lt;p&gt;
-[[Symmetric encryption]]
-[[Asymmetric encryption]]
+Dive Deeper: [[Symmetric encryption]]
+Dive Deeper: [[Asymmetric encryption]]
 &lt;/p&gt;
 
-&lt;div class=&quot;slide-in-left&quot;&gt;
+
 &lt;strong&gt;Navigation:&lt;/strong&gt;
 	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
     &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
@@ -353,15 +426,22 @@ Deeper Dive: [[How encryption evolved over time]]
 	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
 &lt;/div&gt;
 [[Main Lobby]] </tw-passagedata><tw-passagedata pid="4" name="Encryption in Everyday Life" tags="" position="2250,475" size="100,100">&lt;h1&gt;Encryption in Everyday Life&lt;/h1&gt;
-
+&lt;div class=&quot;scale-in-center&quot;&gt;
+&lt;p&gt;Encryption is part of everyday life, even when people do not realize it. It helps protect sensitive information by turning readable data into unreadable text that only authorized systems or users can unlock. This matters because people constantly send personal information online, from passwords and messages to financial details and private accounts.&lt;/p&gt;
 &lt;p&gt;
-[[Passwords]]
-[[HTTP/ secure websites]]
-[[Online bankning]]
-[[Text messaging]]
-&lt;/p&gt;
+Without encryption, much of the internet would be far less safe to use. Activities like signing into websites, checking a bank account, or sending a private message would be much easier for others to intercept or misuse. Even though the process happens quietly in the background, encryption is one of the main tools that helps make modern digital life more secure.&lt;/p&gt;
+
+&lt;/div&gt;
 
 &lt;div class=&quot;slide-in-left&quot;&gt;
+&lt;p&gt;
+Deep Dive: [[Passwords]]
+Deep Dive: [[HTTP/ secure websites]]
+Deep Dive: [[Online banking]]
+Deep Dive: [[Text messaging]]
+&lt;/p&gt;
+
+
 &lt;strong&gt;Navigation:&lt;/strong&gt;
 	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
     &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
@@ -373,11 +453,13 @@ Deeper Dive: [[How encryption evolved over time]]
 [[Main Lobby]] 
 
 </tw-passagedata><tw-passagedata pid="5" name="Limits, Risks, and Ethics" tags="" position="1850,875" size="100,100">&lt;h1 id=&quot;limits-risks-ethics&quot;&gt;Limits, Risks, Ethics&lt;/h1&gt;
-
+&lt;div class=&quot;scale-in-center&quot;&gt;
 &lt;p&gt;
 Encryption is powerful, but it is not perfect. A system can still fail if people choose weak passwords, mishandle sensitive data, or fall for scams that reveal protected information. Encryption also raises ethical questions: it helps protect privacy and free expression, but it can also make criminal activity harder for governments to investigate. Because of that, encryption is often discussed not only as a technical tool, but also as a social and political issue.
 &lt;/p&gt;
 
+&lt;/div&gt;
+&lt;div class=&quot;slide-in-left&quot;&gt;
 &lt;p&gt;
 Dive Deeper: [[Weak passwords]]
 Dive Deeper: [[Human error]]
@@ -385,9 +467,6 @@ Dive Deeper: [[Privacy vs surveillance]]
 Dive Deeper: [[Can encryption be misused?]]
 &lt;/p&gt;
 
-
-
-&lt;div class=&quot;slide-in-left&quot;&gt;
 &lt;strong&gt;Navigation:&lt;/strong&gt;
 	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
     &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
@@ -487,26 +566,25 @@ Enter the decrypted phrase: &lt;&lt;textbox &quot;$guess&quot; &quot;&quot;&gt;&
 	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
 &lt;/div&gt;
 [[Main Lobby]]</tw-passagedata><tw-passagedata pid="7" name="What Is Encryption?" tags="" position="350,200" size="100,100">&lt;h1 id=&quot;what-is-encryption-&quot;&gt;What is Encryption?&lt;/h1&gt;
-[[Main Lobby]] 
+ 
 
-&lt;p&gt;&lt;img class = &quot;slide-in-left&quot; src = &quot;https://www.clickssl.net/wp-content/uploads/2023/02/how-does-encryption-works.jpg&quot;
+&lt;div class=&quot;slide-in-top&quot;&gt;
+&lt;p&gt;&lt;img  src = &quot;https://www.clickssl.net/wp-content/uploads/2023/02/how-does-encryption-works.jpg&quot;
 alt = &quot;encrpytion&quot;
 height = auto
 width = auto /&gt;&lt;/p&gt;
 
-&lt;&lt;timed .5s&gt;&gt;
-&lt;div class=&quot;slide-in-top&quot;&gt;
 &lt;p&gt;&lt;strong&gt;Encryption&lt;/strong&gt; - the process of transforming readable &lt;em&gt;plain-text&lt;/em&gt; into unreadable &lt;em&gt;cipher-text&lt;/em&gt; to mask, hide, or obscure sensitive information. By applying a set of rules, algorithms, or keys, encryption changes information into a form that cannot be easily understood by unauthorized people.&lt;/p&gt;
 &lt;p&gt;Put plainly, encryption is a way of locking information so unauthorized people cannot understand it even if they get access to it. Rather than preventing access altogether, encryption makes stolen or intercepted data useless unless the person viewing it also has the correct key or method to decode it.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;
 
+
+&lt;div&gt;
 &lt;p&gt;
 Deeper Dive: [[Plaintext vs ciphertext]]
 Deeper Dive: [[Why people encrypt information]]
 &lt;/p&gt;
 
-&lt;div class=&quot;slide-in-left&quot;&gt;
 &lt;strong&gt;Navigation:&lt;/strong&gt;
 	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
     &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
@@ -648,14 +726,19 @@ Deeper Dive: [[How encryption evolved over time]]
   Trinity College Article
 &lt;/a&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="13" name="Enigma / wartime cryptography" tags="" position="1175,1075" size="100,100">&lt;h2 id=&quot;enigma-/-wartime-cryptography&quot;&gt;Enigma / wartime cryptography&lt;/h2&gt;
 
-&lt;p&gt;&lt;img class = &quot;obscure-in&quot; src = &quot;https://www.mub.eps.manchester.ac.uk/science-engineering/wp-content/uploads/sites/59/2018/11/Enigma-3.jpg&quot;
+&lt;div class = &quot;obscure-in&quot;&gt;
+&lt;p&gt;&lt;img  src = &quot;https://www.mub.eps.manchester.ac.uk/science-engineering/wp-content/uploads/sites/59/2018/11/Enigma-3.jpg&quot;
 alt = &quot;enigma machine&quot;
 height = auto
 width = auto /&gt;&lt;/p&gt;
 
-&lt;p&gt;The Enigma machine was used by Germany during World War II to encrypt military communications. Unlike older hand-made ciphers, Enigma used rotating electrical rotors to scramble letters in changing patterns, making messages much more difficult to read without the correct settings. At the time, it was seen as a highly advanced system. The Allied effort to break Enigma showed that cryptography and codebreaking could influence battles, military planning, and the course of history itself.&lt;/p&gt;
+&lt;p&gt;The Enigma machine was used by Nazi Germany during World War II to encrypt military and diplomatic communications. Unlike simpler substitution ciphers, Enigma relied on a system of rotating rotors, electrical circuits, and daily key settings that changed the way each letter was encoded. This made the machine far more complex than earlier hand-made codes, because the same letter could be encrypted differently each time it was typed. To German forces, Enigma appeared to provide a fast and highly secure method of protecting sensitive wartime messages.&lt;/p&gt;
+&lt;p&gt;
+Its importance went far beyond technology. Enigma was used to send information about troop movements, naval operations, battlefield plans, and supply coordination. Because so much of Germany’s military communication depended on it, breaking Enigma became one of the most important intelligence goals of the war. Polish mathematicians made some of the earliest major breakthroughs before the war, and later British codebreakers at Bletchley Park, including Alan Turing and many others, expanded that work to help read German encrypted traffic.&lt;/p&gt;
+&lt;p&gt;
+The successful effort to break Enigma had a major impact on the war. Intelligence gathered from decrypted messages gave the Allies insight into German strategy and helped them respond more effectively in the Atlantic and in Europe. Historians often point to Enigma as proof that cryptography and codebreaking were not just background technical skills, but forces that could shape military decisions and alter the course of history. The story of Enigma also marks an important moment in the development of modern computing, because the machines and methods created to attack it helped lay groundwork for later advances in computer science and cybersecurity.&lt;/p&gt;
 
-
+&lt;/div&gt;
 
 &lt;p&gt;
 Deeper Dive: [[Caesar cipher]]
@@ -690,10 +773,18 @@ Deeper Dive: [[Enigma / wartime cryptography]]
   History of Secret Writing
 &lt;/a&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="15" name="Weak passwords" tags="" position="1675,1000" size="100,100">&lt;h2&gt;Weak passwords&lt;/h2&gt;
 
+&lt;div class = &quot;obscure-in&quot;&gt;
+&lt;p&gt;&lt;img  src = &quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpiF7WAxpXGLt3lSJsZexa_j8oJq7NnEfF3Q&amp;s
+&quot;
+alt = &quot;weak password&quot;
+height = auto
+width = auto /&gt;&lt;/p&gt;
+
+
 &lt;p&gt;
 Encryption can protect data, but weak passwords can still leave an account or file easy to break into. If a password is too short, common, or reused, attackers may guess it or crack it through automated attacks. In other words, strong encryption is much less effective when the password protecting it is weak. Humans are not good at remembering long, random secrets, so they often create passwords that are easy to guess. To reduce the security risk this creates, online services use password rules designed to make those passwords stronger.
 &lt;/p&gt;
-
+&lt;/div&gt;
 
 &lt;p&gt;
 Dive Deeper: [[Human error]]
@@ -701,11 +792,13 @@ Dive Deeper: [[Privacy vs surveillance]]
 Dive Deeper: [[Can encryption be misused?]]
 &lt;/p&gt;
 
-
+[[Limits, Risks, and Ethics]] 
+[[Main Lobby]] 
 
 &lt;p&gt;Source: &lt;a href=&quot;https://pages.nist.gov/800-63-4/sp800-63b/passwords/?#:~:text=Humans%20have%20a%20limited%20ability&quot; target=&quot;_blank&quot;&gt;
 Strength of Passwords
 &lt;/a&gt;&lt;/p&gt;
+
 </tw-passagedata><tw-passagedata pid="16" name="Human error" tags="" position="1800,1000" size="100,100">&lt;h2&gt;Human error&lt;/h2&gt;
 
 &lt;div class = &quot;obscure-in&quot;&gt;
@@ -725,7 +818,27 @@ Dive Deeper: [[Privacy vs surveillance]]
 Dive Deeper: [[Can encryption be misused?]]
 &lt;/p&gt;
 
-</tw-passagedata><tw-passagedata pid="17" name="Privacy vs surveillance" tags="" position="1925,1000" size="100,100">
+[[Limits, Risks, and Ethics]] 
+[[Main Lobby]] 
+
+
+&lt;p&gt;Source: &lt;a href=&quot;https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing&quot; target=&quot;_blank&quot;&gt;
+  Phishing
+&lt;/a&gt;&lt;/p&gt;
+</tw-passagedata><tw-passagedata pid="17" name="Privacy vs surveillance" tags="" position="1925,1000" size="100,100">&lt;h2&gt;Privacy vs surveillance&lt;/h2&gt;
+
+&lt;div class = &quot;obscure-in&quot;&gt;
+&lt;p&gt;&lt;img  src = &quot;https://thumbs.dreamstime.com/b/big-brother-watching-you-spying-eyes-surveillance-privacy-concept-vector-illustration-vintage-personal-data-violation-119487817.jpg
+&quot;
+alt = &quot;big brother&quot;
+height = auto
+width = auto /&gt;&lt;/p&gt;
+
+&lt;p&gt;Encryption helps protect privacy by keeping messages and data safe from unwanted access. For individuals, encryption helps preserve personal freedom, confidentiality, and control over private communication. It can protect people from identity theft, cybercrime, and unwanted surveillance by outsiders.&lt;/p&gt;
+
+&lt;p&gt;At the same time, strong encryption has become a point of tension for governments and law enforcement agencies. Officials sometimes argue that when encrypted devices or messages cannot be accessed, criminal investigations and national security efforts can become more difficult.This creates an ongoing debate between two important values: personal privacy and public security.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;p&gt;
 Dive Deeper: [[Weak passwords]]
 Dive Deeper: [[Human error]]
@@ -733,77 +846,127 @@ Dive Deeper: [[Can encryption be misused?]]
 &lt;/p&gt;
 
 
-&lt;div class=&quot;slide-in-left&quot;&gt;
-&lt;strong&gt;Navigation:&lt;/strong&gt;
-	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
-    &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
-	&lt;em&gt;Exhibit 3:&lt;/em&gt; [[How Encryption Works]]
-	&lt;em&gt;Exhibit 4:&lt;/em&gt; [[Encryption in Everyday Life]]
-	&lt;em&gt;Exhibit 5:&lt;/em&gt; [[Limits, Risks, and Ethics]]
-	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
+[[Limits, Risks, and Ethics]] 
+[[Main Lobby]] 
+
+&lt;p&gt;Source: &lt;a href=&quot;https://www.eff.org/deeplinks/2024/12/defending-encryption-us-and-abroad&quot; target=&quot;_blank&quot;&gt;
+Electronic Frontier Foundation
+&lt;/a&gt;&lt;/p&gt;
+</tw-passagedata><tw-passagedata pid="18" name="Can encryption be misused?" tags="" position="2050,1000" size="100,100">&lt;h2&gt;Can encryption be misused?&lt;/h2&gt;
+
+&lt;div class = &quot;obscure-in&quot;&gt;
+&lt;p&gt;&lt;img  src = &quot;https://image.cnbcfm.com/api/v1/image/103503047-3ED4-SB-ENCRYPTIONDEBATE-032916.jpg?v=1529471074&amp;w=750&amp;h=422&amp;vtcrop=y
+
+&quot;
+alt = &quot;debate&quot;
+height = auto
+width = auto /&gt;&lt;/p&gt;
+
+&lt;p&gt;Encryption can be a powerful tool for protection, but it can also be misused. The same protection that benefits legitimate users can also be used by criminal groups. Encrypted communication can make it harder for law enforcement to monitor illegal activity or gather evidence. Criminal networks may use it to hide plans, coordinate operations, and conceal information from investigators. This is one reason law enforcement agencies have connected encrypted messaging services to organized crime, drug trafficking, fraud, money laundering, and other serious offenses.&lt;/p&gt;
+
+&lt;p&gt;On one hand, encryption is a necessary safeguard that protects innocent users and secures modern digital life. On the other hand, it can provide cover for harmful or illegal behavior when used to avoid detection. This tension is part of a larger debate about whether encryption should remain fully private or whether governments should have some way to access encrypted communications in serious cases.
+&lt;/p&gt;
 &lt;/div&gt;
-[[Main Lobby]] </tw-passagedata><tw-passagedata pid="18" name="Can encryption be misused?" tags="" position="2050,1000" size="100,100">
+
 &lt;p&gt;
 Dive Deeper: [[Weak passwords]]
 Dive Deeper: [[Human error]]
 Dive Deeper: [[Privacy vs surveillance]]
 &lt;/p&gt;
 
-&lt;div class=&quot;slide-in-left&quot;&gt;
-&lt;strong&gt;Navigation:&lt;/strong&gt;
-	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
-    &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
-	&lt;em&gt;Exhibit 3:&lt;/em&gt; [[How Encryption Works]]
-	&lt;em&gt;Exhibit 4:&lt;/em&gt; [[Encryption in Everyday Life]]
-	&lt;em&gt;Exhibit 5:&lt;/em&gt; [[Limits, Risks, and Ethics]]
-	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
-&lt;/div&gt;
-[[Main Lobby]] </tw-passagedata><tw-passagedata pid="19" name="Hunter Secret" tags="" position="1575,125" size="100,100">&lt;h1&gt;You found the secret cat&lt;/h1&gt;
+[[Limits, Risks, and Ethics]] 
+[[Main Lobby]] 
 
-&lt;h1 class=&quot;obscure-in&quot;&gt;Correct password!&lt;/h1&gt;
+
+&lt;p&gt;Source: &lt;a href=&quot;https://www.europol.europa.eu/media-press/newsroom/news/international-operation-takes-down-another-encrypted-messaging-service-used-criminals
+&quot; target=&quot;_blank&quot;&gt;
+International operation takes down another encrypted messaging service used by criminals 
+&lt;/a&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="19" name="Hunter Secret" tags="" position="1575,125" size="100,100">
+
+&lt;div class=&quot;scale-in-center&quot;&gt;
+&lt;h1&gt;You found the secret cat&lt;/h1&gt;
 
 	&lt;p&gt;
 		&lt;img class=&quot;cat-pic jello-horizontal&quot; src=&quot;https://raw.githubusercontent.com/jaketerry28/cs239-final/refs/heads/main/IMG_7117.JPG&quot;
 		alt=&quot;picture of my cat&quot;&gt;
 	&lt;/p&gt;
+&lt;/div&gt;
+
+[[Main Lobby]]</tw-passagedata><tw-passagedata pid="20" name="Passwords" tags="" position="2250,600" size="100,100">&lt;h2&gt;Passwords&lt;/h2&gt;
+
+&lt;p&gt;Passwords are often the first barrier protecting personal accounts and devices. While a password itself is not the same thing as encryption, it is closely connected because passwords are often used to control access to encrypted information. A strong password makes it harder for attackers to break into an account or unlock protected data.&lt;/p&gt;
+&lt;p&gt;
+Weak passwords create a major problem because they can undermine security even when strong encryption is being used. If someone chooses a short, common, or reused password, an attacker may be able to guess it and gain access anyway. This shows that security depends not just on the technology, but also on the choices people make.&lt;/p&gt;
 
 
-[[Main Lobby]]</tw-passagedata><tw-passagedata pid="20" name="Passwords" tags="" position="2250,600" size="100,100">&lt;div class=&quot;slide-in-left&quot;&gt;
-&lt;strong&gt;Navigation:&lt;/strong&gt;
-	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
-    &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
-	&lt;em&gt;Exhibit 3:&lt;/em&gt; [[How Encryption Works]]
-	&lt;em&gt;Exhibit 4:&lt;/em&gt; [[Encryption in Everyday Life]]
-	&lt;em&gt;Exhibit 5:&lt;/em&gt; [[Limits, Risks, and Ethics]]
-	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
+&lt;p&gt;
+Deep Dive: [[HTTP/ secure websites]]
+Deep Dive: [[Online banking]]
+Deep Dive: [[Text messaging]]
+&lt;/p&gt;
+
+
+[[Encryption in Everyday Life]] 
+[[Main Lobby]] </tw-passagedata><tw-passagedata pid="21" name="HTTP/ secure websites" tags="" position="2375,600" size="100,100">&lt;h2&gt;HTTP/ secure websites&lt;/h2&gt;
+
+&lt;div class = &quot;bounce-in-top&quot;&gt;
+&lt;p&gt;&lt;img  src = &quot;https://media.geeksforgeeks.org/wp-content/uploads/20240111152750/HTTPS-gif.gif
+&quot;
+alt = &quot;https&quot;
+height = auto
+width = auto /&gt;&lt;/p&gt;
+
+&lt;p&gt;When a website uses HTTPS, it means the connection between your browser and the site is protected with encryption. This helps keep information private as it moves across the internet, including things like usernames, passwords, payment details, and personal data. It is one of the main reasons people can safely log in, shop, and submit information online.&lt;/p&gt;
+
+&lt;p&gt;
+Secure websites are important because data often passes through many systems before reaching its destination. Without encryption, that information could be read or stolen more easily while in transit. HTTPS helps reduce that risk by making the connection between the user and the website much harder for outsiders to monitor or tamper with.
+&lt;/p&gt;
 &lt;/div&gt;
-[[Main Lobby]] </tw-passagedata><tw-passagedata pid="21" name="HTTP/ secure websites" tags="" position="2375,600" size="100,100">&lt;div class=&quot;slide-in-left&quot;&gt;
-&lt;strong&gt;Navigation:&lt;/strong&gt;
-	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
-    &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
-	&lt;em&gt;Exhibit 3:&lt;/em&gt; [[How Encryption Works]]
-	&lt;em&gt;Exhibit 4:&lt;/em&gt; [[Encryption in Everyday Life]]
-	&lt;em&gt;Exhibit 5:&lt;/em&gt; [[Limits, Risks, and Ethics]]
-	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
+
+&lt;p&gt;
+Deep Dive: [[Passwords]]
+Deep Dive: [[Online banking]]
+Deep Dive: [[Text messaging]]
+&lt;/p&gt;
+
+
+[[Encryption in Everyday Life]] 
+[[Main Lobby]] </tw-passagedata><tw-passagedata pid="22" name="Online banking" tags="" position="2125,600" size="100,100">&lt;h2&gt;Online bankning&lt;/h2&gt;
+
+&lt;div class = &quot;bounce-in-top&quot;&gt;
+&lt;p&gt;&lt;img  src = &quot;https://lkmoneymgmt.com/wp-content/uploads/2020/09/iStock-682395884.tashka2000.online.banking-5c7474ef46e0fb00018bd6c5.jpg
+&quot;
+alt = &quot;online banking&quot;
+height = 600px
+width = 900px /&gt;&lt;/p&gt;
+
+&lt;p&gt;Online banking depends heavily on encryption to protect financial information. When people check balances, transfer money, or pay bills online, encryption helps keep account details and transactions private. This is essential because financial data is highly sensitive and valuable to criminals.&lt;/p&gt;
+
+&lt;p&gt;Banks also combine encryption with other security measures, such as account authentication and fraud detection. Encryption alone does not solve every security problem, but it plays a major role in making digital banking possible. Without it, online banking would be much riskier and far less trustworthy for everyday users.&lt;/p&gt;
 &lt;/div&gt;
-[[Main Lobby]] </tw-passagedata><tw-passagedata pid="22" name="Online bankning" tags="" position="2125,600" size="100,100">&lt;div class=&quot;slide-in-left&quot;&gt;
-&lt;strong&gt;Navigation:&lt;/strong&gt;
-	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
-    &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
-	&lt;em&gt;Exhibit 3:&lt;/em&gt; [[How Encryption Works]]
-	&lt;em&gt;Exhibit 4:&lt;/em&gt; [[Encryption in Everyday Life]]
-	&lt;em&gt;Exhibit 5:&lt;/em&gt; [[Limits, Risks, and Ethics]]
-	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
-&lt;/div&gt;
-[[Main Lobby]] </tw-passagedata><tw-passagedata pid="23" name="Text messaging" tags="" position="2250,725" size="100,100">&lt;div class=&quot;slide-in-left&quot;&gt;
-&lt;strong&gt;Navigation:&lt;/strong&gt;
-	&lt;em&gt;Exhibit 1:&lt;/em&gt; [[What Is Encryption?]]
-    &lt;em&gt;Exhibit 2:&lt;/em&gt; [[History of Encryption]]
-	&lt;em&gt;Exhibit 3:&lt;/em&gt; [[How Encryption Works]]
-	&lt;em&gt;Exhibit 4:&lt;/em&gt; [[Encryption in Everyday Life]]
-	&lt;em&gt;Exhibit 5:&lt;/em&gt; [[Limits, Risks, and Ethics]]
-	&lt;em&gt;Interactive Exhibit:&lt;/em&gt; [[Interactive Encrypter]]
-&lt;/div&gt;
+
+&lt;p&gt;
+Deep Dive: [[Passwords]]
+Deep Dive: [[HTTP/ secure websites]]
+Deep Dive: [[Text messaging]]
+&lt;/p&gt;
+
+
+[[Encryption in Everyday Life]] 
+[[Main Lobby]] </tw-passagedata><tw-passagedata pid="23" name="Text messaging" tags="" position="2250,725" size="100,100">&lt;h2&gt;Text messaging&lt;/h2&gt;
+
+&lt;p&gt;Encryption is also used in modern text and messaging services to help keep conversations private. In some apps, messages are protected so that only the sender and the intended recipient can read them. This helps prevent others from easily intercepting or viewing private conversations.&lt;/p&gt;
+
+&lt;p&gt;This is especially important because people often use messaging apps to share personal thoughts, photos, addresses, and other sensitive information. Encrypted messaging gives users more privacy and control over who can access their communication. As digital communication becomes more common, message encryption has become a major part of daily online safety.&lt;/p&gt;
+
+&lt;p&gt;
+Deep Dive: [[Passwords]]
+Deep Dive: [[HTTP/ secure websites]]
+Deep Dive: [[Online banking]]
+&lt;/p&gt;
+
+
+[[Encryption in Everyday Life]] 
 [[Main Lobby]] </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
